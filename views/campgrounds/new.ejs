@@ -2,36 +2,43 @@
 <div class="row">
     <h1 class="text-center">Add new Campground</h1>
     <div class="col-md-6 offset-3">
-    <form action="/campgrounds" method="POST">
+    <form action="/campgrounds" method="POST" class="needsValidation" novalidate>
         <div class="mb-3">
             <label class="form-label" for="title">Title</label>
-            <input class="form-control" type="text" id="title" name="campground[title]">
+            <input class="form-control" type="text" id="title" name="campground[title]" required>
+                <div class="valid-feedback">Looks good!</div>
         </div>
         <div class="mb-3">
             <label class="form-label" for="location">Location</label>
-            <input class="form-control" type="text" id="location" name="campground[location]">
+            <input class="form-control" type="text" id="location" name="campground[location]" required>
+            <div class="valid-feedback">Looks good!</div>
         </div>
         <div class="mb-3">
             <label class="form-label" for="image">Image Url</label>
-            <input class="form-control" type="text" id="image" name="campground[image]">
+            <input class="form-control" type="text" id="image" name="campground[image]" required>
+            <div class="valid-feedback">Looks good!</div>
         </div>
         <div class="mb-3">
             <label class="form-label" for="price">Campground Price</label>
             <div class="input-group" id="price">
                 <span id="price-label" class="input-group-text">$</span>
-                <input type="text" class="form-control" aria-label="price" name="campground[price]" aria-describedby="price-label" placeholder="0.00">
-              </div>
+                <input type="text" class="form-control" aria-label="price" name="campground[price]" aria-describedby="price-label" placeholder="0.00" required>
+                <div class="valid-feedback">Looks good!</div>  
+            </div>
         </div>
         
         <div class="mb-3">
             <label class="form-label" for="description">Description</label>
-            <textarea class="form-control" type="text" id="description" name="campground[description]"></textarea>
+            <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea>
+            <div class="valid-feedback">Looks good!</div>
         </div>
         <button class=" mb-3 btn btn-success">Add Campground</button>
-        <a class="mb-3 btn btn-danger" href="/campgrounds">Cancel</a>
+        <a class="mb-3 btn btn-secondary" href="/campgrounds">Cancel</a>
     </form>
     <a href="/campgrounds">All Campgrounds</a>
     </div>
 </div>
+
+
     
     
